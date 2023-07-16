@@ -13,7 +13,6 @@ const DynamicGraph = ({ options, series, type, height }) => {
 
                 height={height}
             />
-
         </Paper>
     )
 }
