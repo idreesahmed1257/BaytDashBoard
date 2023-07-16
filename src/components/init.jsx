@@ -214,6 +214,7 @@ export const initFile = [
             cols: 6,
             height: 200,
         },
+        API: 'https://official-joke-api.appspot.com/random_joke',
         priority: 3,
         data: {
             title: 'Total Sales',
@@ -231,6 +232,7 @@ export const initFile = [
             cols: 6,
             height: 200,
         },
+        API: 'https://official-joke-api.appspot.com/random_joke',
         priority: 6,
         data: {
             title: 'Network Unlocks',

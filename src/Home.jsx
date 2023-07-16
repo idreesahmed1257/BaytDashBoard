@@ -1,12 +1,10 @@
 import { Box, Grid } from '@mui/material'
+import { useTheme } from 'styled-components';
+import { initFile } from './components/init'
 import Navbar from './components/Navbar'
 import SearchBar from './components/searchBar'
-import { initFile } from './components/init'
 import DynamicGraph from './components/DynamicGraph'
-// import LineChart from './components/LineChart'
-import { useTheme } from 'styled-components';
 import InfoCard from './components/InfoCard'
-import { Rnd } from "react-rnd";
 
 
 const Home = () => {
@@ -16,14 +14,8 @@ const Home = () => {
     return a.priority - b.priority; // Sort by priority
   });
 
-  const style = {
-    display: "flex",
-
-  };
-
   return (
     <div>
-
       <Navbar />
       <Box sx={{ px: '20px', paddingTop: '70px', backgroundColor: theme.palette.peach }}>
         <SearchBar />
@@ -35,7 +27,7 @@ const Home = () => {
                   <DynamicGraph key={index} options={widget.options} type={widget.type} series={widget.series} height={widget.size.height} />
                 )}
                 {widget.name === 'info' && (
-                  <InfoCard key={index} height={widget.size.height} data={widget.data} />
+                  <InfoCard key={index} height={widget.size.height} API={widget.API} />
                 )}
               </Grid>
             )
